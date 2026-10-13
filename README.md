@@ -31,6 +31,7 @@ Repositorios del proyecto (carpetas hermanas):
 | 01 | [Credencial de dispositivo (kioscos y pantallas)](funcionalidades/01-credencial-de-dispositivo.md) | Completo |
 | 02 | [Modos de acceso del visor](funcionalidades/02-modos-de-acceso.md) | Completo |
 | 03 | [Sesiones de ruta y código QR](funcionalidades/03-sesiones-de-ruta-y-qr.md) | Completo |
+| 03b | [Integración con Vanexa (kioscos con agente de voz)](funcionalidades/03-vanexa.md) | Completo |
 | 04 | Editor de mapas: layouts, zonas, estructuras, ubicaciones | Pendiente |
 | 05 | Caminos, enlaces y enlaces verticales | Pendiente |
 | 06 | Cálculo de rutas y rutas accesibles | Pendiente |
