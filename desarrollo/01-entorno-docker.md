@@ -103,6 +103,12 @@ psql -h localhost -p 25434 -U im -d im_dev_db
 | `./inamap.sh test [args]` | Suite `Domain` (unitarias + de integración) contra `im_dev_db_test`. |
 | `./inamap.sh artisan <comando>` | Cualquier comando artisan. |
 | `./inamap.sh shell` / `tinker` | Shell o Tinker dentro del contenedor. |
+| `./inamap.sh tunnel:init` | Una vez: crea `.env.app.tunnel` y `.env.tunnel` (credenciales de Cloudflare). |
+| `./inamap.sh up --tunnel` | Como `up`, con la env pública, y abre el Cloudflare Tunnel: API en `https://api-dev.inamap.space`, websockets en `wss://ws-dev.inamap.space`. Se recuerda hasta `down`. |
+| `./inamap.sh tunnel` | Solo el túnel (el stack ya corre). |
+
+Los modos local y túnel usan los mismos contenedores y la misma base; solo cambia la env de Laravel
+(`.env.app.local` / `.env.app.tunnel`). Detalle y problemas frecuentes: `inamap-backend-docker/QUICK_COMMANDS.md`.
 
 ## 6. Archivos del runtime
 

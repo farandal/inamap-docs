@@ -39,6 +39,9 @@ cp apps/inamap-app/.env.example                         apps/inamap-app/.env.loc
 | Panel de clientes | `pnpm dev:web` → http://localhost:5181 |
 | Administración de plataforma | `pnpm dev:system` → http://localhost:5182 |
 | Visor público | `pnpm dev:app` → http://localhost:5180 |
+| Las tres apps (local) | `pnpm dev:all` |
+| Backend público (api-dev / ws-dev .inamap.space) | `./inamap.sh tunnel:init` (una vez) · `./inamap.sh up --tunnel` |
+| Frontends públicos (app-dev / web-dev / system-dev .inamap.space) | `pnpm tunnel:init` (una vez) · `pnpm dev:tunnel:all` |
 | Pruebas / tipos del frontend | `pnpm test` · `pnpm typecheck` |
 | Build completo del frontend | `pnpm build` |
 
@@ -52,6 +55,9 @@ cp apps/inamap-app/.env.example                         apps/inamap-app/.env.loc
 | PostgreSQL | `psql -h localhost -p 25434 -U im -d im_dev_db` |
 | Redis | `redis-cli -p 25389` |
 | Visor de un inamap | http://localhost:5180/inamap/{id} |
+
+En modo túnel: API `https://api-dev.inamap.space/api`, Reverb `wss://ws-dev.inamap.space`, apps
+`https://app-dev.inamap.space` · `web-dev` · `system-dev`.
 
 ## Credenciales de desarrollo
 

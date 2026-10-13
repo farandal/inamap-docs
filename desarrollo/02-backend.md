@@ -114,6 +114,18 @@ tres de referencia juntos con `./inamap.sh seed:base`.
 | `public_rate_limit` / `session_rate_limit` | 120 / 20 por minuto | Protección de la API pública. |
 | `plan_limit_defaults` | `max_inamaps = 1` | Límites cuando el plan no los define. |
 
+### 6.1 Ajustes por inamap (`inamaps.settings`)
+
+Se guardan como JSON en el propio inamap y se editan desde el drawer de **Configuración** del
+editor o desde la ficha del inamap. Una clave omitida nunca borra la existente (se fusiona).
+
+| Clave | Por defecto | Efecto |
+|---|---|---|
+| `access_mode` | `open` | `open` o `token_required` (credencial de dispositivo). |
+| `session_ttl_minutes` | 60 | Vida de las sesiones de ruta. |
+| `initial_layout_id`, `initial_zoom`, `primary_color` | — | Cómo abre el visor. |
+| `allow_zone_overlap` | `false` | **Zonas solapadas.** Apagado, las zonas de un layout no pueden solaparse (RF-06): el editor las marca en rojo y el servidor responde 422 en `POST/PUT inamap/zones` y en `PUT inamap/layouts/{id}/geometry`. Encendido, ninguna de las dos comprobaciones rige para ese inamap (el borde compartido siempre se permite). Estructuras: sin cambios, solo advierten. Apagarlo no modifica las zonas ya guardadas, pero las nuevas ediciones vuelven a validarse. `Inamap::allowsZoneOverlap()`. |
+
 ## 7. Pruebas
 
 ```bash

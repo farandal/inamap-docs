@@ -58,6 +58,12 @@ invitación al registrarse; `release` (por defecto) abre el registro.
 
 ## 4. Desarrollo
 
+- **Local** (sin túnel): `pnpm dev:all` o `dev:app` / `dev:web` / `dev:system`.
+- **Público** (Cloudflare Tunnel): `pnpm tunnel:init` una vez y `pnpm dev:tunnel:all` publica
+  `app-dev` / `web-dev` / `system-dev` `.inamap.space` contra `api-dev` / `ws-dev`; requiere el backend con
+  `./inamap.sh up --tunnel`. Los dos modos usan los mismos puertos (5180-5182): uno u otro. Ver
+  `inamap-frontend-domain/TUNNELS.md`.
+
 - En `dev`, los paquetes `ina-*` se resuelven a su **código fuente**
   (`vite-plugins/localPackageSrcAliases.mts`): editar un paquete se ve al instante en la app.
 - Las apps DashAdmin cargan recursos con un **manifiesto** (`src/resources/WebPrivateResources.tsx`
@@ -108,6 +114,13 @@ Código en `packages/ina-maps/src/components/editor/`:
 | `useEditorDocument.ts` | Documento del piso con deshacer/rehacer. |
 
 El dibujo lo hace `MapCanvas` (`ina-viewer`), el mismo que usa el visor público.
+
+**Zonas solapadas.** Por defecto las zonas no pueden solaparse: al cerrar una zona que cruza otra
+el editor avisa y no la crea, y las zonas en conflicto se resaltan en rojo. Cada inamap puede
+permitirlo con el interruptor **Permitir zonas solapadas** (drawer *Configuración* →
+`settings.allow_zone_overlap`, apagado por defecto); con él encendido el editor no valida ni
+resalta cruces de zonas, la ayuda de la herramienta lo indica y el servidor tampoco las rechaza
+(ver [02 · Backend](02-backend.md) §6.1).
 
 ## 6. Verificación
 
