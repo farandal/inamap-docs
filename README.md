@@ -15,6 +15,12 @@ explica **cómo funciona y cómo se usa** cada pieza.
 | 03 | [Desarrollo del frontend](desarrollo/03-frontend.md) | Frontend: apps, paquetes `ina-*`, variables, editor de mapas, i18n, verificación |
 | 04 | [Comandos rápidos](desarrollo/04-comandos-rapidos.md) | Referencia para copiar y pegar |
 
+## DevOps
+
+| Guía | Para quién |
+|---|---|
+| [Entorno de producción (preview)](devops/preview-env.md) | Operación: backend en el servidor, frontends en Cloudflare Pages, despliegue automático por rama `production`, verificación, rollback y pendientes |
+
 Repositorios del proyecto (carpetas hermanas):
 
 | Repositorio | Contenido |
@@ -31,6 +37,7 @@ Repositorios del proyecto (carpetas hermanas):
 | 01 | [Credencial de dispositivo (kioscos y pantallas)](funcionalidades/01-credencial-de-dispositivo.md) | Completo |
 | 02 | [Modos de acceso del visor](funcionalidades/02-modos-de-acceso.md) | Completo |
 | 03 | [Sesiones de ruta y código QR](funcionalidades/03-sesiones-de-ruta-y-qr.md) | Completo |
+| 03b | [Integración con Vanexa (kioscos con agente de voz)](funcionalidades/03-vanexa.md) | Completo |
 | 04 | Editor de mapas: layouts, zonas, estructuras, ubicaciones | Pendiente |
 | 05 | Caminos, enlaces y enlaces verticales | Pendiente |
 | 06 | Cálculo de rutas y rutas accesibles | Pendiente |
