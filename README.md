@@ -15,6 +15,12 @@ explica **cómo funciona y cómo se usa** cada pieza.
 | 03 | [Desarrollo del frontend](desarrollo/03-frontend.md) | Frontend: apps, paquetes `ina-*`, variables, editor de mapas, i18n, verificación |
 | 04 | [Comandos rápidos](desarrollo/04-comandos-rapidos.md) | Referencia para copiar y pegar |
 
+## DevOps
+
+| Guía | Para quién |
+|---|---|
+| [Entorno de producción (preview)](devops/preview-env.md) | Operación: backend en el servidor, frontends en Cloudflare Pages, despliegue automático por rama `production`, verificación, rollback y pendientes |
+
 Repositorios del proyecto (carpetas hermanas):
 
 | Repositorio | Contenido |
